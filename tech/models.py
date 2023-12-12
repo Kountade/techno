@@ -1,5 +1,7 @@
 from django.db import models
 
+from django_ckeditor_5.fields import CKEditor5Field
+from ckeditor.fields import RichTextField
 # Create your models here.
 from django.contrib.auth.models import User
 
@@ -8,15 +10,15 @@ from django.contrib.auth.models import User
 
 class Blogs(models.Model):
 
-    title = models.CharField(max_length=5000)
-    description = models.TextField()
+    title = RichTextField()
+    description = RichTextField()
     image = models.ImageField()
     date = models.DateField(auto_now_add=True)
 
 
 class Services(models.Model):
     title = models.CharField(max_length=5000)
-    description = models.TextField()
+    description = RichTextField()
     image = models.ImageField()
     date = models.DateField(auto_now_add=True)
 
