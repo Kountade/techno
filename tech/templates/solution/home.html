@@ -1,4 +1,4 @@
-{% extends '../base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,81 +23,7 @@
    
 <!-- header section starts  -->
 
-<header class="header">
 
-   <a href="#" class="logo">Tech<span>Informatique</span></a>
-
-   <nav class="navbar">
-      <a href="#home">home</a>
-      <a href="#about">about</a>
-      <a href="/services">services</a>
-      <a href="/projects">projects</a>
-      <a href="/pricing">pricing</a>
-      <a href="/contact">contact</a>
-      <a href="/blogs">blogs</a>
-   </nav>
-
-   <div class="icons">
-      <div id="menu-btn" class="fas fa-bars"></div>
-      <div id="info-btn" class="fas fa-info-circle"></div>
-      <div id="search-btn" class="fas fa-search"></div>
-      <div id="login-btn" class="fas fa-user"></div>
-   </div>
-
-   <form action="" class="search-form">
-      <input type="search" name="" placeholder="search here..." id="search-box">
-      <label for="search-box" class="fas fa-search"></label>
-   </form>
-
-   <form action="" class="login-form">
-      <h3>login form</h3>
-      <input type="email" placeholder="enter your email" class="box">
-      <input type="password" placeholder="enter your password" class="box">
-      <div class="flex">
-         <input type="checkbox" name="" id="remember-me">
-         <label for="remember-me">remember me</label>
-         <a href="#">forgot password?</a>
-      </div>
-      <input type="submit" value="login now" class="btn">
-      <p>don't have an account <a href="#">create one!</a></p>
-   </form>
-
-</header>
-
-<div class="contact-info">
-
-   <div id="close-contact-info" class="fas fa-times"></div>
-
-   <div class="info">
-      <i class="fas fa-phone"></i>
-      <h3>phone number</h3>
-      <p>+123-456-7890</p>
-      <p>+111-222-3333</p>
-   </div>
-
-   <div class="info">
-      <i class="fas fa-envelope"></i>
-      <h3>email address</h3>
-      <p>shaikhanas@gmail.com</p>
-      <p>anasbhai@gmail.com</p>
-   </div>
-
-   <div class="info">
-      <i class="fas fa-map-marker-alt"></i>
-      <h3>office address</h3>
-      <p>mumbai, india - 400104</p>
-   </div>
-
-   <div class="share">
-      <a href="#" class="fab fa-facebook-f"></a>
-      <a href="#" class="fab fa-twitter"></a>
-      <a href="#" class="fab fa-instagram"></a>
-      <a href="#" class="fab fa-linkedin"></a>
-   </div>
-
-</div>
-
-<!-- header section ends -->
 
 <!-- home section starts  -->
 
@@ -109,25 +35,27 @@
 
          <section class="swiper-slide slide" style="background: url(../static/images/home-slide-4.jpg) no-repeat;">
             <div class="content">
-               <h3>we provide best service</h3>
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur beatae iusto pariatur laborum magnam eos!</p>
-               <a href="#about" class="btn">get started</a>
+               <h3>nous fournissons les meilleurs services</h3>
+               <p>Nous sommes ravis de vous accueillir dans notre espace dédié aux solutions technologiques. Chez nous, l'innovation et la qualité sont au cœur de tout ce que nous faisons. Que vous soyez une entreprise à la recherche de services informatiques avancés ou un particulier cherchant des solutions personnalisées, vous êtes au bon endroit.</p>
+               <a href="#about" class="btn">Explorez </a>
             </div>
          </section>
 
          <section class="swiper-slide slide" style="background: url(../static/images/home-slide-4.jpg) no-repeat;">
             <div class="content">
-               <h3>making dream come to life</h3>
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur beatae iusto pariatur laborum magnam eos!</p>
-               <a href="#about" class="btn">get started</a>
+               <h3>Donner vie a vos rêves</h3>
+               <p>Nos services couvrent un large éventail de besoins, allant de la gestion de réseau à la cybersécurité, en passant par le développement de logiciels sur mesure. Notre équipe d'experts dévoués est là pour garantir que vos attentes soient non seulement satisfaites, mais dépassées.</p>
+               <a href="#about" class="btn">Explorez</a>
             </div>
          </section>
 
          <section class="swiper-slide slide" style="background: url(../static/images/home-slide-3.jpg) no-repeat;">
             <div class="content">
-               <h3>from concept to creation</h3>
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur beatae iusto pariatur laborum magnam eos!</p>
-               <a href="#about" class="btn">get started</a>
+               <h3>De la  conception à la réalasation</h3>
+               <p>Explorez notre site pour en savoir plus sur nos services, nos projets antérieurs et les retours positifs de nos clients. Nous sommes attachés à la transparence et à la satisfaction du client, et nous sommes toujours disponibles pour répondre à vos questions ou discuter de vos projets.</p>
+
+                  <p>  Merci de nous faire confiance. Nous sommes impatients de collaborer avec vous et de vous fournir les meilleurs services informatiques. Bienvenue chez nous !</p>
+               <a href="#about" class="btn">Explorez</a>
             </div>
          </section>
 
