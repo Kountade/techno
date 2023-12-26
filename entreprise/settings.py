@@ -25,8 +25,24 @@ SECRET_KEY = "django-insecure-lr*x7mj^f^503fr34)ia8z(iqsgo-qx8t*jg5w83l*&51q0@x!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["techno-production.up.railway.app", "127.0.0.1"]
+# ALLOWED_HOSTS = ["techno-production.up.railway.app", "127.0.0.1"]
 
+ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.techsinformatique.com", "https://*.127.0.0.1"]
+
+CSRF_COOKIE_SECURE = True  # CSRF cookie enabled only Https server
+CSRF_COOKIE_HTTPONLY = True  # CSRF stored in http only cookie
+CSRF_TESTED_ORIGINS = [
+    "http://localhost:8000"
+]
+CSRF_COOKIE_SAMESITE = "Lax"  # Samesite "Lax" - Protection against csrf attacks
+
+MIDDLEWARE = [
+
+    'django.middleware.csrf.CsrfViewMiddleware'
+]
+# Application definition
 
 # Application definition
 
