@@ -23,6 +23,10 @@ def home(request):
     return render(request, "solution/home.html", context,)
 
 
+def about(request):
+    return render(request, "solution/about.html")
+
+
 def blogs(request):
     myblog = Blogs.objects.all()
     context = {
