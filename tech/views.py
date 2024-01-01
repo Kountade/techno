@@ -52,7 +52,10 @@ def service(request):
         "myservice": myservice
     }
 
-    return render(request, "solution/services.html", context)
+
+def projets(request):
+
+    return render(request, "solution/projects.html", )
 
 
 def pricing(request):
