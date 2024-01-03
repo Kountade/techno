@@ -974,3 +974,14 @@ section {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+.descripblo {
+  word-wrap: break-word;
+  white-space: pre-line;
+  margin-left: 4%;
+  margin-right: 4%;
+  padding: 0%;
+
+}
