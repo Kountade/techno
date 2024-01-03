@@ -10,7 +10,7 @@
 
 <section class="services" id="services">
 
-    <h1 class="heading"> our services </h1>
+    <h1 class="heading"> Nos services </h1>
  
     <div class="box-container">
  {% for services in myservice %}
@@ -19,7 +19,7 @@
        <div class="box">
           <img src="{{services.image.url}}" alt="">
           <h3>{{services.title}}</h3>
-          <p>{{services.description}}</p>
+          <p>{{services.description|truncatechars:300|safe}}</p>
        </div>
        {% endfor %}
       

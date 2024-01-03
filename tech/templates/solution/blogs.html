@@ -11,7 +11,7 @@
 
 <section class="blogs" id="blogs">
 
-    <h1 class="heading"> our blogs </h1>
+    <h1 class="heading"> Notre blogs </h1>
    
     <div class="swiper blogs-slider">
  
@@ -25,7 +25,7 @@
              </div>
              <div class="content">
                 <h3>{{blogs.title}}</h3>
-                <p>{{blogs.description}}</p>
+                <p>{{blogs.description|truncatechars:100|safe}}</p>
                 <a href="{% url 'blogdetail' blogs.title %}" class="btn">read more</a>
              </div>
           </div>

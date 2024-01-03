@@ -74,7 +74,7 @@
 
 <section class="about" id="about">
 
-   <h1 class="heading"> about us </h1>
+   <h1 class="heading">À propos de nous </h1>
 
    <div class="row">
 
@@ -135,7 +135,7 @@
       <div class="box">
          <img src="{{services.image.url}}" alt="">
          <h3>{{services.title}}</h3>
-         <p>{{services.description}}</p>
+         <p>{{services.description|truncatechars:300|safe}}</p>
       </div>
       {% endfor %}
      
@@ -362,7 +362,7 @@
 
 <section class="blogs" id="blogs">
 
-   <h1 class="heading"> our blogs </h1>
+   <h1 class="heading"> Notre blogs </h1>
 
    <div class="swiper blogs-slider">
 
@@ -379,7 +379,7 @@
             </div>
             <div class="content">
                <h3>{{blogs.title}}</h3>
-               <p>{{blogs.description}}</p>
+               <p>{{blogs.description|truncatechars:150|safe}}</p>
                <a href="{% url 'blogdetail' blogs.title %}" class="btn">read more</a>
             </div>
          </div>
