@@ -13,11 +13,13 @@ def home(request):
     myservice = Services.objects.all()
     myrewies = Reviews.objects.all()
     myblog = Blogs.objects.all()
+    myprising = Pricings.objects.all()
 
     context = {
         "myservice": myservice,
         "myrewies": myrewies,
-        "myblog": myblog
+        "myblog": myblog,
+        "myprising": myprising
     }
 
     return render(request, "solution/home.html", context,)
