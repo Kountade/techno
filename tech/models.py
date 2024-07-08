@@ -23,6 +23,15 @@ class Services(models.Model):
     date = models.DateField(auto_now_add=True)
 
 
+class Projets(models.Model):
+
+    title = models.CharField(max_length=5000)
+    description = models.TextField(max_length=2000)
+    lien = models.CharField(max_length=500)
+    image = models.ImageField()
+    date = models.DateField(auto_now_add=True)
+
+
 class Reviews(models.Model):
     customer = models.OneToOneField(User, on_delete=models.CASCADE)
     text = models.TextField()

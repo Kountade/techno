@@ -154,90 +154,31 @@
 
 <section class="projects" id="projects">
 
-   <h1 class="heading"> nos projets </h1>
+   <h1 class="heading"> Tops projets </h1>
 
    <div class="box-container">
 
-      <a href="../static/images/dev3.jpg" class="box">
+      {% for projets in myprojet %}
+      
+      <a href="{{projets.image.url}}" class="box">
          <div class="image">
-            <img src="../static/images/dev3.jpg" alt="">
+            <img src="{{projets.image.url}}" alt="">
          </div>
          <div class="content">
             <div class="info">
-               <h3>dream home</h3>
-               <p>construction, design</p>
+               <h3>{{projets.title}}</h3>
+               <p>{{projets.lien}}</p>
             </div>
             <i class="fas fa-plus"></i>
          </div>
       </a>
-
-      <a href="../static/images/dev3.jpg" class="box">
-         <div class="image">
-            <img src="../static/images/dev3.jpg" alt="">
-         </div>
-         <div class="content">
-            <div class="info">
-               <h3>dream home</h3>
-               <p>construction, design</p>
-            </div>
-            <i class="fas fa-plus"></i>
-         </div>
-      </a>
-
-      <a href="../static/images/dev3.jpg" class="box">
-         <div class="image">
-            <img src="../static/images/dev3.jpg" alt="">
-         </div>
-         <div class="content">
-            <div class="info">
-               <h3>dream home</h3>
-               <p>construction, design</p>
-            </div>
-            <i class="fas fa-plus"></i>
-         </div>
-      </a>
-      <a href="images/project-4.jpg" class="box">
-         <div class="image">
-            <img src="../static/images/dev3.jpg" alt="">
-         </div>
-         <div class="content">
-            <div class="info">
-               <h3>dream home</h3>
-               <p>construction, design</p>
-            </div>
-            <i class="fas fa-plus"></i>
-         </div>
-      </a>
-
-      <a href="images/dev3.jpg" class="box">
-         <div class="image">
-            <img src="../static/images/dev3.jpg" alt="">
-         </div>
-         <div class="content">
-            <div class="info">
-               <h3>dream home</h3>
-               <p>construction, design</p>
-            </div>
-            <i class="fas fa-plus"></i>
-         </div>
-      </a>
-
-      <a href="../static/images/dev3.jpg" class="box">
-         <div class="image">
-            <img src="../static/images/dev3.jpg" alt="">
-         </div>
-         <div class="content">
-            <div class="info">
-               <h3>dream home</h3>
-               <p>construction, design</p>
-            </div>
-            <i class="fas fa-plus"></i>
-         </div>
-      </a>
-
+      
+      {% endfor %}
    </div>
-
 </section>
+
+  
+
 
 <!-- projects section ends -->
 

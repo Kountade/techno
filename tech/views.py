@@ -13,13 +13,15 @@ def home(request):
     myservice = Services.objects.all()[:3]
     myrewies = Reviews.objects.all()
     myblog = Blogs.objects.all()
-    myprising = Pricings.objects.all()
+    myprising = Pricings.objects.all()[:3]
+    myprojet = Projets.objects.all()[:3]
 
     context = {
         "myservice": myservice,
         "myrewies": myrewies,
         "myblog": myblog,
-        "myprising": myprising
+        "myprising": myprising,
+        "myprojet": myprojet
     }
 
     return render(request, "solution/home.html", context,)
@@ -57,8 +59,13 @@ def service(request):
 
 
 def projets(request):
+    myprojet = Projets.objects.all()
 
-    return render(request, "solution/projects.html", )
+    context = {
+        "myprojet": myprojet
+    }
+
+    return render(request, "solution/projects.html", context)
 
 
 def pricing(request):

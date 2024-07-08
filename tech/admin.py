@@ -8,6 +8,11 @@ class AdminBlogs(admin.ModelAdmin):
     list_display = ("title", "description", "image")
 
 
+class AdminProjets(admin.ModelAdmin):
+
+    list_display = ("title", "description", "lien", "image", "date")
+
+
 class AdminServices(admin.ModelAdmin):
 
     list_display = ("title", "description", "image")
@@ -25,6 +30,7 @@ class AdminPricing(admin.ModelAdmin):
 
 
 admin.site.register(Blogs, AdminBlogs)
+admin.site.register(Projets, AdminProjets)
 admin.site.register(Services, AdminServices)
 admin.site.register(Reviews, AdminReviews)
 admin.site.register(Pricings, AdminPricing)
