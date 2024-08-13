@@ -32,6 +32,13 @@ class Projets(models.Model):
     date = models.DateField(auto_now_add=True)
 
 
+class Entreprise(models.Model):
+
+    name = models.CharField(max_length=5000)
+    image = models.ImageField()
+    date = models.DateField(auto_now_add=True)
+
+
 class Reviews(models.Model):
     customer = models.OneToOneField(User, on_delete=models.CASCADE)
     text = models.TextField()
@@ -39,7 +46,8 @@ class Reviews(models.Model):
 
 
 class Pricings(models.Model):
-    image = models.ImageField()
+    # Classe FontAwesome pour les icônes
+    icon_class = models.CharField(max_length=255)
     title = models.CharField(max_length=5000)
     prise = models.IntegerField()
     pric1 = models.CharField(max_length=5000)
@@ -47,3 +55,6 @@ class Pricings(models.Model):
     pric3 = models.CharField(max_length=5000)
     pric4 = models.CharField(max_length=5000)
     pric5 = models.CharField(max_length=5000)
+
+    def __str__(self):
+        return self.title

@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 
 
 def home(request):
-    myservice = Services.objects.all()[:3]
+    myservice = Services.objects.all()
     myrewies = Reviews.objects.all()
     myblog = Blogs.objects.all()
     myprising = Pricings.objects.all()[:3]
@@ -85,6 +85,16 @@ def reviews(request):
         "myrewies": myrewies
     }
     return render(request, "solution/pages/home.html", context)
+
+
+def clients(request):
+
+    myclients = Entreprise.objects.all()
+
+    context = {
+        "myclients": myclients
+    }
+    return render(request, "solution/clients.html", context)
 
 
 def contact(request):

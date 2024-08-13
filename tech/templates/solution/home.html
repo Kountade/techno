@@ -227,7 +227,7 @@
 
 <section class="pricing" id="pricing">
 
-   <h1 class="heading"> our pricing </h1>
+   <h1 class="heading"> Nos plans </h1>
 
    <div class="box-container">
 
@@ -238,9 +238,12 @@
 
 
       <div class="box">
-         <i class="	fas fa-money-check-alt"></i>
+        
+         <i class="{{ pricings.icon_class}}"></i>
+
+       
          <h3>{{pricings.title}}</h3>
-         <div class="price"><span>$</span>{{pricings.prise}}<span>/PP</span></div>
+         <div class="price"><span></span>{{pricings.prise}}<span>CFA</span></div>
          <div class="list">
             <p>{{pricings.pric1}}</p>
             <p>{{pricings.pric2}}</p>
@@ -248,7 +251,7 @@
             <p>{{pricings.pric4}}</p>
             <p>{{pricings.pric5}}</p>
          </div>
-         <a href="#" class="btn">choisie ton tarif</a>
+         <a href="#" class="btn">choisie ton plan de site</a>
       </div>
       {% endfor %}
    </div>
@@ -261,7 +264,7 @@
 
 <section class="contact" id="contact">
 
-   <h1 class="heading"> contact us </h1>
+   <h1 class="heading">Contactez-nous</h1>
 
    <div class="row">
 
@@ -286,7 +289,7 @@
 
 <section class="blogs" id="blogs">
 
-   <h1 class="heading"> Notre blogs </h1>
+   <h1 class="heading"> Notre blog </h1>
 
    <div class="swiper blogs-slider">
 
@@ -304,7 +307,7 @@
             <div class="content">
                <h3>{{blogs.title}}</h3>
                <p>{{blogs.description|truncatechars:150|safe}}</p>
-               <a href="{% url 'blogdetail' blogs.title %}" class="btn">read more</a>
+               <a href="{% url 'blogdetail' blogs.title %}" class="btn">voir plus</a>
             </div>
          </div>
            {% endfor %}
@@ -316,25 +319,6 @@
 </section>
 
 <!-- blogs section ends -->
-
-<!-- client logo section starts -->
-
-<section class="logo-container">
-   <div class="swiper logo-slider">
-      <div class="swiper-wrapper">
-         <div class="swiper-slide slide"><img src="../static/images/logo.png" alt=""></div>
-         <div class="swiper-slide slide"><img src="../static/images/logo1.png" alt=""></div>
-         <div class="swiper-slide slide"><img src="../static/images/logo2.png" alt=""></div>
-         <div class="swiper-slide slide"><img src="../static/images/logo.png" alt=""></div>
-         <div class="swiper-slide slide"><img src="../static/images/logo.png" alt=""></div>
-         <div class="swiper-slide slide"><img src="../static/images/logo.png" alt=""></div>
-      </div>
-   </div>
-</section>
-
-<!-- client logo section ends -->
-
-
 
 
 
