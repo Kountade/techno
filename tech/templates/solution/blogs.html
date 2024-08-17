@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% load static %}{% block content %}
-<title>{% block title %}Tech-Informatique-blogs{% endblock title %}</title>
+<title>{% block title %}Techs-Informatique-blogs{% endblock title %}</title>
 
 
 
@@ -26,7 +26,7 @@
              <div class="content">
                 <h3>{{blogs.title}}</h3>
                 <p>{{blogs.description|truncatechars:100|safe}}</p>
-                <a href="{% url 'blogdetail' blogs.title %}" class="btn">read more</a>
+                <a href="{% url 'blogdetail' blogs.title %}" class="btn">Lire plus</a>
              </div>
           </div>
             {% endfor %}
