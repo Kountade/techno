@@ -3,39 +3,43 @@
 {% block content %}
 
 
+
 <!-- pricing section starts  -->
 
 <section class="pricing" id="pricing">
 
-    <h1 class="heading"> our pricing </h1>
- 
-    <div class="box-container">
- 
-      
- 
-     {% for pricings in myprising  %}
+   <h1 class="heading"> Nos plans </h1>
+
+   <div class="box-container">
+
      
 
- 
-       <div class="box">
-          <i class="	fas fa-money-check-alt"></i>
-          <h3>{{pricings.title}}</h3>
-          <div class="price"><span>$</span>{{pricings.prise}}<span></span></div>
-          <div class="list">
-             <p> <i class="	fa fa-check"></i>  {{pricings.pric1}}</p>
-             <p> <i class="	fas fa-money-check-alt"></i>  {{pricings.pric2}}</p>
-             <p> <i class="	fas fa-money-check-alt"></i>  {{pricings.pric3}}</p>
-             <p>{{pricings.pric4}}</p>
-             <p>{{pricings.pric5}}</p>
-          </div>
-          <a href="#" class="btn">choose plan</a>
-       </div>
-       {% endfor %}
-    </div>
- 
- </section>
- 
- <!-- pricing section ends -->
+    {% for pricings in myprising  %}
+    
+
+
+      <div class="box">
+        
+         <i class="{{ pricings.icon_class}}"></i>
+
+       
+         <h3>{{pricings.title}}</h3>
+         <div class="price"><span></span>{{pricings.prise}}<span>CFA</span></div>
+         <div class="list">
+            <p>{{pricings.pric1}}</p>
+            <p>{{pricings.pric2}}</p>
+            <p>{{pricings.pric3}}</p>
+            <p>{{pricings.pric4}}</p>
+            <p>{{pricings.pric5}}</p>
+         </div>
+         <a href="#" class="btn">choisie ton plan de site</a>
+      </div>
+      {% endfor %}
+   </div>
+
+</section>
+
+<!-- pricing section ends -->
  
  {% endblock content %}
 
