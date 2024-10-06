@@ -11,7 +11,8 @@ urlpatterns = [
     path("projets", views.projets, name="projets"),
     path("pricing", views.pricing, name="pricing"),
     path("contact", views.contact, name="contact"),
-    path("blogdetail/<pk:title>", views.blogdetail, name="blogdetail"),
+    path("blogdetail/<str:title>", views.blogdetail, name="blogdetail"),
+    
 
     path("register", views.register, name="register"),
 
