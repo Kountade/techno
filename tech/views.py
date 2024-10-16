@@ -64,6 +64,8 @@ def projets(request):
     context = {
         "myprojet": myprojet
     }
+    
+
 
     return render(request, "solution/projects.html", context)
 
@@ -95,6 +97,17 @@ def clients(request):
         "myclients": myclients
     }
     return render(request, "solution/clients.html", context)
+
+def equipe(request):
+    team = Equipe.objects.all()
+
+    context = {
+        "team": team
+    }
+    
+
+
+    return render(request, "solution/equipe.html", context)
 
 
 def contact(request):

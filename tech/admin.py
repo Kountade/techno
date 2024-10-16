@@ -24,13 +24,18 @@ class AdminServices(admin.ModelAdmin):
 
 class AdminReviews(admin.ModelAdmin):
 
-    list_display = ("customer", "text", "date")
+    list_display = ("nom","text","image", "date")
 
 
 class AdminPricing(admin.ModelAdmin):
 
     list_display = ("icon_class", "title", "prise", "pric1",
                     "pric2", "pric3", "pric4", "pric5")
+
+class AdminEquipe(admin.ModelAdmin):
+
+    list_display = ("nom", "profession", "image", "date",
+                    )
 
 
 admin.site.register(Blogs, AdminBlogs)
@@ -39,3 +44,4 @@ admin.site.register(Services, AdminServices)
 admin.site.register(Reviews, AdminReviews)
 admin.site.register(Pricings, AdminPricing)
 admin.site.register(Entreprise, AdminEntreprise)
+admin.site.register(Equipe, AdminEquipe)

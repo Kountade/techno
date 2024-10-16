@@ -37,6 +37,13 @@ class Projets(models.Model):
     image = models.ImageField()
     date = models.DateField(auto_now_add=True)
 
+class Equipe(models.Model):
+
+    nom = models.CharField(max_length=5000)
+    profession = models.TextField(max_length=2000)
+    image = models.ImageField()
+    date = models.DateField(auto_now_add=True)
+
 
 class Entreprise(models.Model):
 
@@ -46,8 +53,9 @@ class Entreprise(models.Model):
 
 
 class Reviews(models.Model):
-    customer = models.OneToOneField(User, on_delete=models.CASCADE)
+    nom  = models.TextField(max_length=100)
     text = models.TextField()
+    image = models.ImageField()
     date = models.DateField(auto_now_add=True)
 
 

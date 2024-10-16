@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %}{% block content %}
+<title>{% block title %}Techs-informatique-Eqiupe{% endblock title %}</title>
+
+<!-- projects section starts  -->
+
+<section class="projects" id="projects">
+
+    <h1 class="heading"> nos projets </h1>
+ 
+    <div class="box-container">
+ 
+       {% for tms in team %}
+       
+       <a href="{{tms.image.url}}" class="box">
+          <div class="image">
+             <img src="{{tms.image.url}}" alt="">
+          </div>
+          <div class="content">
+             <div class="info">
+                <h3>{{tms.nom}}</h3>
+                <p>{{tms.profession}}</p>
+             </div>
+             <i class="fas fa-plus"></i>
+          </div>
+       </a>
+       
+       {% endfor %}
+ 
+     
+    
+ 
+    </div>
+   
+ </section>
+
+ 
+ <!-- projects section ends -->
+ {% endblock content %}
