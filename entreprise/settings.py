@@ -154,13 +154,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Custom Admin Settings
 JAZZMIN_SETTINGS = {
-    "site_title": "FastCart Ecommerce",
-    "site_header": "FastCart Ecommerce",
-    "site_brand": "FastCart Ecommerce ",
+    "site_title": " Digital ",
+    "site_header": "Techs-Informatique",
+    "site_brand": "Techs-Informatique",
     # "site_icon": "images/favicon.ico",
     # "site_logo": "images/logos/logo.jpg",
-    "welcome_sign": "Welcome To Desphixs",
-    "copyright": "Desphixs",
+    "welcome_sign": "WelcomeTechs-Informatique",
+    "copyright": "Techs-Informatique",
     "user_avatar": "images/photos/logo.jpg",
     "show_sidebar": True,
     "navigation_expanded": True,
