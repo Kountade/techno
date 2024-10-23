@@ -5,6 +5,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
 from django.contrib.auth.models import User
+from django.shortcuts import render
+from .utils import nettoyer_html
+
 
 # Create your views here.
 
@@ -38,14 +41,18 @@ def blogs(request):
     }
     return render(request, "solution/blogs.html", context)
 
-
 def blogdetail(request, title: str):
     try:
         blogdetaile = Blogs.objects.get(title=title)
-
     except Blogs.DoesNotExist:
-        raise ("le poste n'excite pas")
-    return render(request, "solution/blogdetail.html", {"blogdetaile": blogdetaile})
+        raise Exception("Le poste n'existe pas")
+
+    # Nettoyer le contenu et gérer les retours à la ligne en ajoutant des balises <p>
+    contenu_nettoye = "".join(f"<p>{ligne.strip()}</p>" for ligne in blogdetaile.content.splitlines() if ligne.strip())
+
+    # Passer le contenu formaté au template
+    return render(request, "solution/blogdetail.html", {"blogdetaile": blogdetaile, "contenu_nettoye": contenu_nettoye})
+
 
 
 def service(request):
@@ -120,3 +127,8 @@ def login(request):
 
 def register(request):
     return render(request, "solution/register.html")
+
+
+# views.py
+
+

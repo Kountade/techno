@@ -5,7 +5,7 @@ from .models import *
 
 class AdminBlogs(admin.ModelAdmin):
 
-    list_display = ("title", "description", "image")
+    list_display = ("title", "content", "image")
 
 
 class AdminEntreprise(admin.ModelAdmin):

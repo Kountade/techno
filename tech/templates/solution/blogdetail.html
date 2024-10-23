@@ -1,34 +1,32 @@
-{% extends 'base.html' %} {% load static %}{% block content %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 <title>{% block title %}Techs-Informatique-Article complet{% endblock title %}</title>
 
- <!-- header section starts  -->
-
-<!-- blogs section starts  -->
+<!-- blogs section starts -->
 
 <section class="blogs" id="blogs">
 
-    <h1 class="heading">  Article complet</h1>
+    <h1 class="heading">Article complet</h1>
  
     <div class="swiper blogs-slider">
  
-          <div class="swiper-slide slide">
-             <div class="image">
-                <img src="{{blogdetaile.image.url}}" alt="">
-             </div>
-             <div class="content descripblo">
-                <h3>{{blogdetaile.title}}</h3>
+        <div class="swiper-slide slide">
+            <div class="image">
+                <img src="{{ blogdetaile.image.url }}" alt="">
+            </div>
+            <div class="content descripblo">
+                <h3>{{ blogdetaile.title }}</h3>
                 <article>
-                <p class="descripblo">{{blogdetaile.description}}</p>
-               </article>
-    
-
+                    <!-- Afficher le contenu nettoyé avec le filtre safe pour rendre les balises <p> -->
+                    <div class="descripblo">{{ contenu_nettoye|safe }}</div>
+                </article>
+            </div>
+        </div>
  
     </div>
  
- </section>
+</section>
  
- <!-- blogs section ends -->
- {% endblock content %}
-
-
-
+<!-- blogs section ends -->
+{% endblock content %}
